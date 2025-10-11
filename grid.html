@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.container{
+    display: grid;
+    grid-template-columns: 70px 70px 70px;
+    grid-template-rows: 70px 70px 70px;
+     background-color: aqua;
+    padding: 10px;
+    width: 220px;
+     gap: 2px; 
+}
+.container div{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+   background-color:chartreuse;
+    padding: 23px;
+    border: 2px solid chocolate;  
+} 
+
+.gridb{
+        display: inline-grid;
+        grid-template-columns: 90px 90px 90px 90px 90px;
+        grid-template-rows: 90px 90px 90px 90px;
+        background-color: chartreuse;
+        /* width: 470px; */
+        padding: 10px;
+        gap: 6px;
+         border: 2px solid chocolate;
+         
+}
+
+.one{
+    grid-column: 1/6;
+    /* background-color: aqua; */
+     border: 2px solid chocolate;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.two{
+    grid-row-start: 2;
+    grid-row-end: 4;
+    border: 2px solid chocolate;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.the{
+    grid-column: 2/6;
+     border: 2px solid chocolate;
+      display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.for{
+    grid-column: 2/4;
+     border: 2px solid chocolate;
+      display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.fiv{
+    grid-column: 4/6;
+     border: 2px solid chocolate;
+      display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.six{
+    grid-column: 1/6;
+     border: 2px solid chocolate;
+      display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>one</div>
+        <div>two</div>
+        <div>thr</div>
+        <div>for</div>
+        <div>fiv</div>
+        <div>six</div>
+        <div>sev</div>
+         <div>eig</div>
+        <div>nin</div>
+    </div>
+    <br><br><br>
+
+            <div class="gridb">
+                <div class="one" >Header</div>
+                <div class="two">Side Bar</div>
+                <div class="the">content1</div>
+                <div class="for">content2</div>
+                <div class="fiv">content3</div>
+                <div class="six">Footer </div>
+            </div>
+
+</body>
+</html>

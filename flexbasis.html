@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+  display: flex;
+  background-color: lightgray;
+  padding: 10px;
+}
+
+.box {
+  background-color: skyblue;
+  margin: 10px;
+  text-align: center;
+  font-size: 25px;
+  color: white;
+}
+
+/* each box starts with a different flex-basis */
+.box1 {
+  flex-basis: 100px;  /* starts with 100px width */
+}
+
+.box2 {
+  flex-basis: 200px;  /* starts with 200px width */
+}
+
+.box3 {
+  flex-basis: 300px;  /* starts with 300px width */
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+  <div class="box box1">A</div>
+  <div class="box box2">B</div>
+  <div class="box box3">C</div>
+</div>
+
+</body>
+</html>

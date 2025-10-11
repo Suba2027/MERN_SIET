@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <style>
+            body{
+                background-repeat: no-repeat;
+                /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmG2yrD_8daZgjc-a5IuZHXlV7X-cYMdAlhg&s'); */
+               background-color: rgb(226, 202, 249);
+                background-size: 1500px 750px;
+            }
+            .choices{
+                display: flex;
+                gap: 15px;
+                 padding: 20px;
+               padding-left: 200px;
+            }
+            .but{
+                padding: 30px;
+                border-radius: 3px;
+                border: 3px solid blueviolet;
+                color: rgb(255, 0, 195);
+                background-color:rgb(236, 215, 188);
+             }
+            .tit{
+                color: rgb(76, 76, 246);
+                text-align: center;
+                text-decoration: underline;
+                font-style: oblique;
+                font-size: 50px;
+            }
+            .sub{
+                color: rgb(56, 114, 231);
+                text-align: center;
+                font-style: italic;
+                font-size: 35px;
+            }
+            .name{
+                margin-right: 50px;
+                font-size: 25px;
+                color: rgb(126, 3, 241);
+                border: 3px solid blueviolet;
+            }
+            .result{
+                text-align: center;
+                font-size: 45px;
+                color: blueviolet;
+            }
+            
+        </style>
+
+</head>
+<body>
+    <h1 class="tit">ROCK🪨 PAPER📃 SCISSOR✂️</h1>
+    <h3 class="sub">Choose your choices</h3>
+    <div class="choices">
+
+   <div>
+     <button class="name">   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH3VRVW4Aurh9snkhmzwKPkCh-Z5BTSgTO8c7O-JRPdhDLMS8xax8fl6_Jb4200VVx_Ug&usqp=CAU" alt="rock" height="230px" onclick="play('rock')" class="but"><br> ROCK </button>
+  
+   </div>
+   
+   <div>
+    <button class="name"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCK1i_GocjM9MrICoE-GFNbMxkLgWPie1tJQ&s" alt="paper" height="230px" onclick="play('paper')" class="but">  <br>PAPER </button>   
+         
+        </div>
+
+        <div>
+       <button class="name">      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiA-7x7WMdfgP7M-Ig8n3NaGBqionPZsCgKA&s" alt="scissor" height="230px" onclick="play('scissor')" class="but">  <br>SCISSOR  </button> 
+         </div>
+
+     </div>
+    <br>
+    <div id="res" class="result">Result:</div>
+ 
+    <script>
+        function play(player){
+            const choices=['rock','paper','scissor'];
+            let computer =choices[Math.floor(Math.random()*3)];
+            let result='';
+            if(player===computer){
+                result='Draw🙌';
+            }
+            else if((player==='rock' && computer==='scissor')||(player==='paper'&& computer==='rock')||(player==='scissor'&&computer==='papeer')){
+                result='You Won👌';
+            }
+            else{
+                result='You Lose😒';
+            }
+            document.getElementById('res').innerHTML="Result: You choosed "+player+" and " +"Computer choosed "+computer+" so "+result;
+        }
+    </script>
+</body>
+</html>

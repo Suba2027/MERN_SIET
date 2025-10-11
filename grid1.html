@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+    display: grid;
+    grid-template-columns: 70px 70px 70px;
+    grid-template-rows: 70px 70px 70px;
+    height: 400px;
+     background-color: aqua;
+    padding: 10px;
+     /* gap: 2px;  */
+    /* justify-content:space-around; */
+            align-content: space-around;
+}
+.container div,.container1 div{
+                        /* display: flex;
+                        justify-content: center;
+                         align-items: center; */
+   background-color:chartreuse;
+    padding: 23px;
+    border: 2px solid chocolate;  
+} 
+ 
+        .container1{
+    display: grid;
+    grid-template-columns: 70px 70px 70px;
+    grid-template-rows: 70px 70px 70px;
+    height: 400px;
+     background-color: aqua;
+    padding: 10px;
+    /* place-content: start end; */
+    place-content: end space-between;    /*  (end--align,space-between--justify)*/
+        /* place-content: start space-evenly; */
+}
+
+
+.grid{
+    
+    display: grid;
+    grid-template-columns: 50px 50px 50px;
+    grid-template-rows: 50px 50px 50px;
+    background-color: bisque;
+    padding: 10px;
+  /* gap: 3px; */
+}
+.grid div{
+    background-color: aquamarine;
+    padding: 20px;
+   border: 2px dotted chocolate;
+
+}
+.item5{
+    grid-area: 1/2/span 2/span 1;
+}
+    </style>
+</head>
+<body>
+     <div class="container">
+        <div>one</div>
+        <div>two</div>
+        <div>thr</div>
+        <div>for</div>
+        <div>fiv</div>
+        <div>six</div>
+        <div>sev</div>
+         <div>eig</div>
+        <div>nin</div>
+    </div>
+<br><br>
+     <div class="container1">
+        <div>one</div>
+        <div>two</div>
+        <div>thr</div>
+        <div>for</div>
+        <div>fiv</div>
+        <div>six</div>
+        <div>sev</div>
+         <div>eig</div>
+        <div>nin</div>
+    </div>
+
+    <br><br>
+    <div class="grid">
+        <div>1</div>
+        <div class="item5"v>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+    </div>
+</body>
+</html>
