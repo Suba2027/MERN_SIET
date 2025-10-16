@@ -6,13 +6,22 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- Using document.write() after an HTML document is loaded, will delete all existing HTML: -->
+     <button onclick="document.write(7+7)" >try it</button>
     <h1 id="change">Click the button</h1>
     <button onclick="button()">click here</button>
+    <button  onclick="window.print()">print</button>
+    
 
     <script>
         function button(){
 document.getElementById("change").innerHTML="you already clicked!!"
         }
+        document.write(5+7);
+        window.alert('suba');
+        console.log('suba');//browser's console
+     
+ //  This means that variables, properties, and methods by default belong to the window object. This also means that specifying the window keyword is optional:
     </script>
 </body>
 </html>

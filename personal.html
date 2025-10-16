@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="document.getElementById('date').innerHTML=Date()">click here show date</button>
+    <p id="date"></p>
+    <img id="demo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlpf9tcAGq0rjYcgVV59mlVw47ViWNLmuEgw&s" alt="">
+    <button onclick="document.getElementById('demo').src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlpf9tcAGq0rjYcgVV59mlVw47ViWNLmuEgw&s'">turn on</button>
+    <button onclick="document.getElementById('demo').src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1bxIc0U20pohH_0wRP1FNqkcyKMai6dzAHA&s'">turn off</button>
+
+    <p id="name">SUBALAKSHMI RAVICHANDRAN</p>
+    <button onclick="document.getElementById('name').style.fontSize='30px'">clickme</button>
+    <button onclick="document.getElementById('name').style.display='none'">hide</button>
+     <button onclick="document.getElementById('name').style.display='block'">show</button>
+    <p id="did">peace calm help provide take</p>
+    <button onclick="good()">did you get it</button> 
+
+    <p id="bet"></p>
+ 
+    <p id="nextop"></p>
+<button onclick="myfunc()">show paras</button>
+    <p id="par1"></p>
+    <p id="par2"></p>
+<script>
+    function good(){
+    document.getElementById('did').innerHTML="received"
+    }
+    let x=20;
+    const name="super man"
+document.getElementById('nextop').innerHTML="there are " +x+" peoples "+name+" will save";
+        function myfunc(){
+            document.getElementById('par1').innerHTML="this is first paragraph";
+            document.getElementById('par2').innerHTML="this is second paragraph";
+
+        }
+
+        // let pers="4"+3+"suba";
+        // document.getElementById("bet").innerHTML='pers';
+        // console.log(pers);
+
+    </script>
+</body>
+</html>
+
+
+
+
+<!-- javascript = literals and variables(values and var) 
+ 
+JavaScript keywords are case-sensitive.
+Hyphens are not allowed in JavaScript. They are reserved for subtractions.
+JavaScript programmers tend to use lower camel case.
+The web browser (Chrome, Firefox, Edge, etc.) has a built-in JavaScript engine.
+JavaScript cannot run outside a browser (unless using Node.js).
+That’s why JavaScript is called a client-side language — it runs on the user’s browser.
+VS Code by itself cannot run it — VS Code is just an editor. You can edit the file there,
+ but to run it, the browser executes the JavaScript.
+ Names must begin with a letter, a $ sign or an underscore (_).
+ If you put a number in quotes, the rest of the numbers will be treated as strings, and concatenated.-->

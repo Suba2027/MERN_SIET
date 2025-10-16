@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Byju’s Style Newsletter Popup</title>
+  <style>
+    /* ====== GENERAL STYLING ====== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #fff5e6;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    /* ====== HEADER ====== */
+    header {
+      background-color: #ff7a00;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 24px;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffe6cc;
+    }
+
+    /* ====== HERO SECTION ====== */
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #ffaf4b, #ff7a00);
+      color: white;
+    }
+
+    .hero h2 {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* ====== CONTENT SECTION ====== */
+    .content {
+      padding: 50px 20px;
+      max-width: 900px;
+      margin: auto;
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    .content h3 {
+      color: #ff7a00;
+      margin-bottom: 10px;
+    }
+
+    /* ====== OVERLAY FOR POPUP ====== */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(4px);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .overlay.active {
+      display: flex;
+      animation: fadeIn 0.4s ease;
+    }
+
+    /* ====== POPUP BOX ====== */
+    .popup {
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+      padding: 40px 30px;
+      max-width: 400px;
+      width: 90%;
+      text-align: center;
+      transform: scale(0.8);
+      opacity: 0;
+      transition: all 0.4s ease;
+      position: relative;
+    }
+
+    .popup.active {
+      transform: scale(1);
+      opacity: 1;
+    }
+
+    /* ====== CLOSE BUTTON ====== */
+    .close-btn {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 28px;
+      color: #777;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .close-btn:hover {
+      color: #ff3b3b;
+      transform: rotate(90deg);
+    }
+
+    /* ====== POPUP IMAGE ====== */
+    .popup img {
+      width: 80px;
+      margin-bottom: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .popup img:hover {
+      transform: scale(1.1);
+    }
+
+    /* ====== TEXT STYLING ====== */
+    h2 {
+      font-size: 22px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 15px;
+      color: #555;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    /* ====== INPUT + BUTTON ====== */
+    input[type="email"] {
+      width: 85%;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      outline: none;
+      transition: border 0.3s, box-shadow 0.3s;
+    }
+
+    input[type="email"]:focus {
+      border-color: #ff7a00;
+      box-shadow: 0 0 5px rgba(255, 122, 0, 0.4);
+    }
+
+    .subscribe-btn {
+      background: linear-gradient(135deg, #ff7a00, #ffb347);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 25px;
+      margin-top: 15px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .subscribe-btn:hover {
+      background: linear-gradient(135deg, #e06a00, #ffa733);
+      transform: scale(1.05);
+    }
+
+    /* ====== ANIMATIONS ====== */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* ====== RESPONSIVE DESIGN ====== */
+    @media (max-width: 600px) {
+      .hero h2 {
+        font-size: 28px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .popup {
+        padding: 25px 20px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      input[type="email"] {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- ====== HEADER ====== -->
+  <header>
+    <h1>ByjuLearn</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Courses</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ====== HERO SECTION ====== -->
+  <section class="hero">
+    <h2>Upgrade Your Learning Journey</h2>
+    <p>Join millions of students who trust ByjuLearn to improve their skills with interactive lessons and personalized guidance.</p>
+  </section>
+
+  <!-- ====== MAIN CONTENT ====== -->
+  <section class="content">
+    <h3>Why Choose ByjuLearn?</h3>
+    <p>
+      ByjuLearn provides a unique learning experience with high-quality video lessons, quizzes, and AI-driven personalized study plans. 
+      Our expert educators simplify complex topics and help students achieve academic success with confidence. 
+      Subscribe now to get weekly updates, study tips, and free resources!
+    </p>
+  </section>
+
+  <!-- ====== NEWSLETTER POPUP ====== -->
+  <div class="overlay" id="overlay">
+    <div class="popup" id="popup">
+      <span class="close-btn" id="closeBtn">&times;</span>
+      <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Newsletter">
+      <h2>Join Our Newsletter</h2>
+      <p>Get exclusive study materials, offers, and weekly learning updates!</p>
+      <input type="email" placeholder="Enter your email" required>
+      <br>
+      <button class="subscribe-btn">Subscribe</button>
+    </div>
+  </div>
+
+  <script>
+    // ====== SHOW POPUP AFTER 3 SECONDS ======
+    window.addEventListener('load', () => {
+      const overlay = document.getElementById('overlay');
+      const popup = document.getElementById('popup');
+      const closeBtn = document.getElementById('closeBtn');
+
+      setTimeout(() => {
+        overlay.classList.add('active');
+        popup.classList.add('active');
+      }, 3000); // show after 3 seconds
+
+      // ====== CLOSE WHEN X IS CLICKED ======
+      closeBtn.addEventListener('click', () => {
+        overlay.classList.remove('active');
+        popup.classList.remove('active');
+      });
+
+      // ====== CLOSE WHEN CLICKING OUTSIDE ======
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) {
+          overlay.classList.remove('active');
+          popup.classList.remove('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
