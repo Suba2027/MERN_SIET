@@ -8,6 +8,7 @@ import About from "./pages/About.jsx"
 // import Services from "./pages/Services.jsx"
 import State from './Hooks/state.jsx'
 
+import Effect from './Hooks/Effect.jsx'
 const App = () => {
   return (
       <>
@@ -19,6 +20,10 @@ const App = () => {
       {/* <Route path ="/services" Component={Services}/>;         */}
     
       <Route path="/state" Component={State}/>
+            
+            
+      <Route path="/effect" Component={Effect}/>     
+            
              {/* <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />

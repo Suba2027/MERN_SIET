@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -27,7 +27,7 @@
         <div class="mobile-nav" id="mobileNav"></div>
     </header>
 
-    <!-- photo -->
+    
     <div class="hero">
         <div class="hero-inner">
             <img src="" alt="Subalakshmi R" id="heroPhoto" class="hero-photo">
@@ -43,6 +43,243 @@
             </div>
         </section>
     </main>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subalakshmi R Portfolio</title>
+    <style>
+        body{
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ADBBDA;
+            color: #1b2f77;
+        }
+
+        /* Header */
+        .who {
+            text-align: center;
+            padding: 30px 10px;
+        }
+
+        .who h2 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        .who p {
+            font-size: 18px;
+            margin-top: 5px;
+        }
+
+        /* Social Icons */
+        .socials {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .social-icon {
+            width: 35px;
+            height: 35px;
+            transition: transform 0.3s;
+        }
+
+        .social-icon:hover {
+            transform: scale(1.2);
+        }
+
+        /* Navigation */
+        .cont {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            background-color: #7091e6;
+            padding: 10px 15px;
+            border-radius: 20px;
+            width: 80%;
+            max-width: 900px;
+            margin: 20px auto;
+        }
+
+        .link {
+            font-size: 16px;
+            padding: 5px 10px;
+            text-decoration: none;
+            color: #1b2f77;
+            background-color: #a8bff9;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .link:hover {
+            background-color: #1b2f77;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        /* Sections */
+        section {
+            max-width: 900px;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* Projects */
+        .projects {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .project-card {
+            border: 1px solid #1b2f77;
+            border-radius: 10px;
+            padding: 15px;
+            width: 250px;
+            background-color: #a8bff9;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        /* Skills */
+        .skills {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skill {
+            background-color: #a8bff9;
+            padding: 10px 15px;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+
+        /* Image */
+        .profile-image {
+            width: 220px;
+            height: 220px;
+            border-radius: 30px;
+            object-fit: cover;
+            border: 3px solid #1b2f77;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 20px;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        /* Responsive */
+        @media screen and (max-width: 768px){
+            .cont {
+                flex-direction: column;
+            }
+
+            .projects {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="who">
+        <h2>SUBALAKSHMI R</h2>
+        <p>MERN Stack Developer | UI/UX Designer</p>
+
+        <!-- Social Icons -->
+        <div class="socials">
+            <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
+                <img src="images/linkedin.png" alt="LinkedIn" class="social-icon">
+            </a>
+            <a href="https://github.com/yourprofile" target="_blank">
+                <img src="images/github.png" alt="GitHub" class="social-icon">
+            </a>
+            <a href="https://leetcode.com/yourprofile" target="_blank">
+                <img src="images/leetcode.png" alt="LeetCode" class="social-icon">
+            </a>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="cont">
+        <a href="#about" class="link">About Me</a>
+        <a href="#projects" class="link">Projects</a>
+        <a href="#skills" class="link">Skills</a>
+        <a href="#contact" class="link">Contact</a>
+    </div>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <img src="images/profile.jpg" alt="Subalakshmi R" class="profile-image">
+        <p>
+            Hey there! I’m Subalakshmi, a MERN Stack Developer with a passion for creating dynamic web applications 
+            and engaging user experiences. I also specialize in UI/UX design and love crafting intuitive interfaces that users enjoy.
+        </p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects">
+            <div class="project-card">
+                <h3>Queue Counter IoT</h3>
+                <p>IoT project to estimate waiting time using IR sensors and ESP32.</p>
+            </div>
+            <div class="project-card">
+                <h3>Friendship Greeting App</h3>
+                <p>A web app to send greeting messages with photo gallery features.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills">
+            <div class="skill">C Programming</div>
+            <div class="skill">HTML & CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">SQL</div>
+            <div class="skill">UI/UX Design</div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: your.email@example.com</p>
+        <p>Phone: +91-XXXXXXXXXX</p>
+    </section>
 
 </body>
 </html>
